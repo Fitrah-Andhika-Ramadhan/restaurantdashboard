@@ -1,0 +1,207 @@
+/* Global Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Softer font for modern look */
+  background-color: #f7f7f7; /* Lighter background for better contrast */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Dark text for better readability */
+  line-height: 1.6;
+}
+
+/* Main App Container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #81c3d7, #f3c3ff); /* Soft pastel gradient */
+}
+
+/* Logo Styling */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header Styling */
+.App-header {
+  background-color: #4a6b89; /* Modern slate blue */
+  color: #ffffff;
+  padding: 3rem 2rem; /* Larger padding for more spacing */
+  text-align: center;
+  border-bottom: 3px solid #3b4a61; /* Darker shade for border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.App-header h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.App-header p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #d1d5db; /* Light gray for secondary text */
+}
+
+/* Links in the App */
+.App-link {
+  color: #4fa3f7; /* Bright accent color */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.App-link:hover {
+  color: #3b82f6; /* Blue hover effect */
+  text-decoration: underline;
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Keyframes for Logo Animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tab and Content Layout */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 20px;
+}
+
+.tab-button {
+  background-color: #2d3e4f; /* Dark blue-gray */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:hover {
+  background-color: #4fa3f7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.tab-button.selected {
+  background-color: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Responsive Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 2rem;
+}
+
+/* Styling for Cards (Staff, Sales, Inventory) */
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Table Styling for Staff Schedule */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #333;
+}
+
+table td {
+  background-color: #fff;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+table tbody tr:hover {
+  background-color: #edf2f7;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Responsive Table */
+  table {
+    font-size: 0.95rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
+
+  .tabs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-button {
+    margin: 8px;
+    font-size: 1rem;
+  }
+
+  /* Header text resizing */
+  .App-header h1 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,243 @@
+/* Global Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7fafc; /* Soft light background */
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Header Styling */
+h1 {
+  color: #2d3748; /* Dark header text */
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: 3rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: #4a5568; /* Subtle gray for subheaders */
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-style: italic;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+table th,
+table td {
+  padding: 1.25rem;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+table thead {
+  background-color: #4c51bf; /* Vibrant blue */
+  color: white;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f3f4f6; /* Light gray */
+}
+
+table tbody tr:hover {
+  background-color: #edf2f7;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Button Styling */
+button {
+  cursor: pointer;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #38bdf8, #4c51bf);
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  filter: brightness(95%);
+  transform: translateY(-4px);
+}
+
+button:focus {
+  outline: 3px solid #38bdf8;
+}
+
+/* Flexbox Layout */
+.flex {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray-50 {
+  background-color: #f3f4f6;
+}
+
+.text-blue-600 {
+  color: #38bdf8;
+}
+
+.text-gray-600 {
+  color: #4a5568;
+}
+
+/* Shadow and Rounded Elements */
+.shadow-lg {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+  border-radius: 1.25rem;
+}
+
+.transition-colors {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Card and Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient Backgrounds */
+.bg-gradient {
+  background: linear-gradient(135deg, #4c51bf, #38bdf8);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Card Styling for Charts */
+.chart-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.chart-card-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.chart-container {
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  border-radius: 1rem;
+  box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhancements for Charts */
+.chart-container .recharts-responsive-container {
+  height: 100%;
+}
+
+.chart-container .recharts-line-chart {
+  border-radius: 1rem;
+}
+
+/* Adjustments for Hover and Transitions in Cards */
+.card, .chart-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .chart-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Chart Styling */
+.chart {
+  height: 350px;
+  border-radius: 10px;
+  background-color: #f3f4f6;
+  padding: 2rem;
+}
